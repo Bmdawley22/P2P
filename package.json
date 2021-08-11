@@ -4,7 +4,8 @@
   "description": "p2p betting app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scripts": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/Bmdawley22/p2p/issues"
   },
-  "homepage": "https://github.com/Bmdawley22/p2p#readme"
+  "homepage": "https://github.com/Bmdawley22/p2p#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+    
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
 }
