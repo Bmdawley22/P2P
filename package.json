@@ -1,0 +1,19 @@
+{
+  "name": "p2p",
+  "version": "1.0.0",
+  "description": "p2p betting app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bmdawley22/p2p.git"
+  },
+  "author": "Brady Dawley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bmdawley22/p2p/issues"
+  },
+  "homepage": "https://github.com/Bmdawley22/p2p#readme"
+}
