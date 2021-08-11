@@ -1,5 +1,5 @@
 const rendLogin = (req, res, next) => {
-    res.send('login page')
+    res.render('login.ejs')
 }
 const rendSignup = (req, res, next) => {
     res.send('signup page')
