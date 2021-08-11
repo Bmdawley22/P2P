@@ -4,11 +4,13 @@ const port = 8000;
 
 const authRouter = require('./routes/auth')
 
+app.use(express.static('public'));
+app.set(('view engine', 'ejs'))
 
 app.use('/auth', authRouter)
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.render('index.ejs')
 });
 
 app.listen(port, () => {
