@@ -3,16 +3,26 @@
           {
                "fName": "Brady",
                "lName": "Dawley",
+               "email": "dawleyb11@gmail.com",
                "username": "Bmdawley22",
                "password": "packers",
                "id": "1"
           },
           {
                "fName": "Brady",
-               "lName": "Dawley",
+               "lName": "D",
+               "email": "dawleybradym@johndeere.com",
                "username": "bmdawley",
                "password": "packers",
                "id": "1"
+          },
+          {
+               "fName": "maria",
+               "lName": "mcodnough",
+               "email": "mcdonoughm10@gmail.com",
+               "username": "maria123",
+               "password": "password",
+               "id": "3"
           },
           {
                "fName": "2",
@@ -21,14 +31,6 @@
                "username": "2",
                "password": "2",
                "id": "2"
-          },
-          {
-               "fName": "2",
-               "lName": "3",
-               "email": "2@3",
-               "username": "3",
-               "password": "2",
-               "id": "3"
           }
      ]
 }

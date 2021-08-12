@@ -5,7 +5,6 @@ const fs = require('fs')
 
 
 const rendLogin = (req, res, next) => {
-    //console.log(users[0].id);
     res.render('login.ejs', {
         authMsg: false
     })
@@ -24,7 +23,7 @@ const login = (req, res, next) => {
         return user.username === req.body.username;
     })
     if(usernameFound !== -1) {
-        if(users[usernameFound].password === req.body.password) {
+        if(data.users[usernameFound].password === req.body.password) {
             res.redirect('/')
         }
         else {
