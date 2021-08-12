@@ -85,6 +85,11 @@ main {
     font-size: 30px;
     width: 100%;
 }
+#errMsg {
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
 #loginDiv form {
     text-align: center;
     display: flex;
@@ -100,6 +105,7 @@ main {
 .inputLabel input {
     border: black solid 3px;
     border-radius: 5px;
+    color: black;
 }
 #loginSubmit {
     color: black;

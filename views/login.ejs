@@ -23,16 +23,20 @@
     <main>
         <div id='loginDiv'>
             <h5>Login to your account</h5>
-            <form>
+            <% if (authMsg) { %>
+                <h6 id='errMsg'><%= authMsg %></h6>
+                <% console.log(authMsg) %>
+            <% } %>
+            <form action='/auth/login' method='POST'>
                 <div class='inputLabel'>
                     <label for="username">Username :</label>
-                    <input type='text' name='username' id='username' >
+                    <input type='text' name='username'  id='username' required>
                 </div>
                 <div class='inputLabel'>
                     <label for="password">Password :</label>
-                    <input type='password' name='password' id='password' >        
+                    <input type='password' name='password' id='password' required>        
                 </div>
-                <input type='submit' id='loginSubmit'>
+                <input type='submit' id='loginSubmit' value='Login'>
             </form>
         </div>
         <footer>
@@ -43,10 +47,7 @@
             <div id='homeBets'>
                 <p>Available Bets</p>
             </div>
-            <div id='homeAcct'>
-                <p>Brady</p>
-                <p>$88.00</p>
-            </div>
+
         </footer>       
     </main>
 </body>
