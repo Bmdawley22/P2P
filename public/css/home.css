@@ -107,7 +107,7 @@ main {
     border-radius: 5px;
     color: black;
 }
-#loginSubmit {
+#loginSubmit, #signinSubmit {
     color: black;
     font-size: 15px;
     border: black solid 3px;

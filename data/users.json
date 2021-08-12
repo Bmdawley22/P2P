@@ -1,14 +1,34 @@
 {
-    "0": {
-        "firstName": "Brady",
-        "lastName": "Dawley",
-        "username": "Bmdawley22",
-        "password": "packers"
-    },
-    "1": {
-        "firstName": "Brady",
-        "lastName": "Dawley",
-        "username": "bmdawley",
-        "password": "packers"
-    }
+     "users": [
+          {
+               "fName": "Brady",
+               "lName": "Dawley",
+               "username": "Bmdawley22",
+               "password": "packers",
+               "id": "1"
+          },
+          {
+               "fName": "Brady",
+               "lName": "Dawley",
+               "username": "bmdawley",
+               "password": "packers",
+               "id": "1"
+          },
+          {
+               "fName": "2",
+               "lName": "2",
+               "email": "2@2",
+               "username": "2",
+               "password": "2",
+               "id": "2"
+          },
+          {
+               "fName": "2",
+               "lName": "3",
+               "email": "2@3",
+               "username": "3",
+               "password": "2",
+               "id": "3"
+          }
+     ]
 }
