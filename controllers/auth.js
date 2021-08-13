@@ -24,7 +24,7 @@ const login = (req, res, next) => {
     })
     if(usernameFound !== -1) {
         if(data.users[usernameFound].password === req.body.password) {
-            res.redirect('/')
+            res.redirect('/user/home')
         }
         else {
             res.render('login.ejs', {
@@ -71,7 +71,7 @@ const signup = (req,res,next) => {
                 data = JSON.stringify(data, null, 5)
 
                 fs.writeFile('./data/users.json', data, (data) => {
-                    res.redirect('/')
+                    res.redirect('/user/home')
                 }) 
             } else {
                 res.render('signup.ejs', {
