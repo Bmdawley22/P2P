@@ -6,7 +6,8 @@
                "email": "dawleyb11@gmail.com",
                "username": "Bmdawley22",
                "password": "packers",
-               "id": "1"
+               "id": "1",
+               "active": false
           },
           {
                "fName": "Brady",
@@ -14,7 +15,8 @@
                "email": "dawleybradym@johndeere.com",
                "username": "bmdawley",
                "password": "packers",
-               "id": "1"
+               "id": "1",
+               "active": false
           },
           {
                "fName": "maria",
@@ -22,7 +24,8 @@
                "email": "mcdonoughm10@gmail.com",
                "username": "maria123",
                "password": "password",
-               "id": "3"
+               "id": "3",
+               "active": false
           },
           {
                "fName": "2",
@@ -30,7 +33,17 @@
                "email": "2@2",
                "username": "2",
                "password": "2",
-               "id": "2"
+               "id": "2",
+               "active": false
+          },
+          {
+               "fName": "2",
+               "lName": "3",
+               "email": "3@3",
+               "username": "3",
+               "password": "3",
+               "id": "4",
+               "active": true
           }
      ]
 }

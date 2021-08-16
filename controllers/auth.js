@@ -16,7 +16,7 @@ const rendSignup = (req, res, next) => {
 }
 
 const login = (req, res, next) => {
-    const data = JSON.parse(fs.readFileSync('./data/users.json'));
+    let data = JSON.parse(fs.readFileSync('./data/users.json'));
 
     //used for when using userData.js
     const usernameFound = data.users.findIndex(user => {
@@ -24,6 +24,10 @@ const login = (req, res, next) => {
     })
     if(usernameFound !== -1) {
         if(data.users[usernameFound].password === req.body.password) {
+            data.users[usernameFound]["active"] = true;
+            
+            data = JSON.stringify(data, null, 5)
+            fs.writeFileSync('./data/users.json', data, {encoding: 'utf-8'})
             res.redirect('/user/home')
         }
         else {
@@ -47,6 +51,7 @@ const signup = (req,res,next) => {
         //gets input data in users.json format
         const newUser = req.body;
         newUser.id = String(data.users.length);
+        newUser.active = true;
         let check = {nameCheck: true, emailCheck: true, userCheck: true}
         let nameCheck = true
         let emailCheck = true
@@ -70,7 +75,7 @@ const signup = (req,res,next) => {
                 data.users.push(newUser)
                 data = JSON.stringify(data, null, 5)
 
-                fs.writeFile('./data/users.json', data, (data) => {
+                fs.writeFileSync('./data/users.json', data, (data) => {
                     res.redirect('/user/home')
                 }) 
             } else {

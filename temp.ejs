@@ -5,20 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P2P</title>
-    <link href='../css/user.css' rel='stylesheet'> 
+    <link href='./css/auth.css' rel='stylesheet'>   
 </head>
 <body>
     <header>
-        <div id='welcome'>
-            <p>Welcome, </p>
-        </div>
+        <a href='/user/account'>
+            <div id='account'>     
+                <p>Account</p>
+                <p><%= user.fName + ' ' + user.lName %></p>
+            </div>
+        </a>
         <div id='title'>
             <h1>P2P Betting</h1>
             <h3>The industries' first <span>peer-to-peer</span> betting app!</h3>
         </div>
-        <div id='authLink'>
-            <a href='/auth/login'>Login</a>
-            <a href='/auth/signup'>Signup</a>
+        <div id='balance'>
+            <a href='/user/'>
+                <p>Balance: <%= user.acct %></p>
+
+            </a>
         </div>
     </header>
     <main>
