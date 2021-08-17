@@ -50,6 +50,7 @@ const signup = async (req,res,next) => {
         const newUser = req.body;
         newUser.id = String(data.users.length);
         newUser.active = true;
+        newUser.bal = "$0"
         let check = {nameCheck: true, emailCheck: true, userCheck: true}
 
         for(i=0;i<data.users.length; i++) {

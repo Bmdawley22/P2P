@@ -7,7 +7,8 @@
                "username": "Bmdawley22",
                "password": "packers",
                "id": "0",
-               "active": "false"
+               "active": "false",
+               "bal": "$1000"
           },
           {
                "fName": "Brady",
@@ -16,7 +17,8 @@
                "username": "bmdawley",
                "password": "packers",
                "id": "1",
-               "active": "false"
+               "active": "false",
+               "bal": "$20"
           },
           {
                "fName": "2",
@@ -25,16 +27,8 @@
                "username": "2",
                "password": "2",
                "id": "2",
-               "active": true
-          },
-          {
-               "fName": "2",
-               "lName": "3",
-               "email": "2@4",
-               "username": "4",
-               "password": "2",
-               "id": "3",
-               "active": false
+               "active": true,
+               "bal": "$0"
           }
      ]
 }
