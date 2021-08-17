@@ -24,11 +24,11 @@
         <h3><%= user.fName + '   ' + user.lName + "'s    Account"%></h3>
         <div id='balance'>
             <p>Withdrawable Balance: </p>
-            <p><%= '  ' + user.bal %></p>
+            <p><%= '  $' + user.bal %></p>
         </div>
         <div id='funding'>
-            <a id='deposit' href="/user/deposit/">Deposit</a>
-            <a id='withdraw' href='/user/withdraw'>Withdraw</a>
+            <a id='deposit' href="/user/rendDeposit/">Deposit</a>
+            <a id='withdraw' href='/user/rendWithdraw'>Withdraw</a>
         </div>
               
     </main>

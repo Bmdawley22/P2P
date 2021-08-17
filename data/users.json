@@ -8,7 +8,7 @@
                "password": "packers",
                "id": "0",
                "active": "false",
-               "bal": "$1000"
+               "bal": "1000"
           },
           {
                "fName": "Brady",
@@ -17,8 +17,8 @@
                "username": "bmdawley",
                "password": "packers",
                "id": "1",
-               "active": true,
-               "bal": "$20"
+               "active": false,
+               "bal": "50"
           },
           {
                "fName": "2",
@@ -27,8 +27,8 @@
                "username": "2",
                "password": "2",
                "id": "2",
-               "active": false,
-               "bal": "$0"
+               "active": true,
+               "bal": 120
           }
      ]
 }

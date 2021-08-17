@@ -27,12 +27,16 @@
                 <p>Withdrawable Balance: </p>
                 <p><%= '  ' + user.bal %></p>
             <%} else { %>
-                <form>
-                    <label></label>
-                    <input />
+                <form action='/user/deposit' id='depositForm'>
+                    <div id='depositInput'>
+                        <label for="depositAmt">Amount to Deposit ($):</label>
+                        <input id="depositAmt" type="number" name="depositAmt"
+                            min="0" max="10000" value="depositAmt"/>
+                    </div>
+                    <input id="depositSubmit" type="submit" value="Deposit" />                    
                 </form>
                 <p>Current Balance: </p>
-                <p><%= '  ' + user.bal %></p>
+                <p><%= '  $' + user.bal %></p>
             <% } %>
         </div>
               

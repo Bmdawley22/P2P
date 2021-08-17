@@ -40,10 +40,25 @@ const rendWithdraw = async (req,res,next) => {
         transact: 'withdraw'
     })
 }
+const deposit = async (req,res,next) => {
+    let data = await getData()
+
+    let activeUserId = await findActiveUser(data).id
+    
+    const curBalance = Number(data.users[activeUserId]["bal"])
+
+    data.users[activeUserId]["bal"] = curBalance + Number(req.query.depositAmt);
+    reWriteData(data)
+
+    res.render('acct.ejs', {
+        user: data.users[activeUserId]
+    })
+}
 
 module.exports = {
     rendUserHome, 
     rendAcct,
     rendDeposit,
-    rendWithdraw
+    rendWithdraw,
+    deposit
 }

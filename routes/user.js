@@ -6,7 +6,9 @@ const userRouter = require('../controllers/user');
 
 router.get('/home', userRouter.rendUserHome)
 router.get('/acct', userRouter.rendAcct)
-router.get('/deposit', userRouter.rendDeposit)
+router.get('/rendDeposit', userRouter.rendDeposit)
+router.get('/rendWithdraw', userRouter.rendWithdraw)
+router.get('/deposit', userRouter.deposit)
 router.get('/withdraw', userRouter.rendWithdraw)
 
 module.exports = router;

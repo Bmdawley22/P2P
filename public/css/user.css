@@ -55,6 +55,21 @@ main {
 main h3 {
     font-size: 50px;
 }
+#depositInput {
+    font-size: 25px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#depositInput input {
+    color: black;
+    width: 8vw;
+}
+#depositSubmit {
+    color: black;
+    font-size: 25px;
+    margin-top: 5px;
+}
 #balance {
     font-size: 30px;
     background-color: blue;
