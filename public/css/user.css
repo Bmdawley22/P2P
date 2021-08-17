@@ -55,6 +55,11 @@ main {
 main h3 {
     font-size: 50px;
 }
+
+#friendsList {
+    
+}
+
 #depositInput, #withdrawInput {
     font-size: 25px;
     padding: 8px;
@@ -97,4 +102,41 @@ main h3 {
 
 #deposit:hover, #withdraw:hover {
     opacity: 0.75;
+}
+footer {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+    height: 12vh;
+    align-items: center;
+}
+#footerNav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50vw;
+    border: 2px white solid;
+    border-radius: 5px;
+    max-height: 12vh;
+}
+#footerNav a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+}
+#footerNav a:hover {
+    background-color: rgb(54, 54, 54);
+}
+#friends p {
+    margin: 0px;
+}
+
+#friends, #availableBets {
+    border-right: 2px white solid;
+
 }

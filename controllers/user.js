@@ -74,11 +74,25 @@ const withdraw = async (req,res,next) => {
         user: data.users[activeUserId]
     })
 }
+
+const rendFriends = async (req,res,next) => {
+    let data = await getData()
+
+    let activeUserId = await findActiveUser(data).id
+    
+    let friendsArr = data.users[activeUserId]["friends"]
+    res.render('friends.ejs', {
+        users: data.users,
+        userId: activeUserId,
+        friends: friendsArr
+    })
+}
 module.exports = {
     rendUserHome, 
     rendAcct,
     rendDeposit,
     rendWithdraw,
     deposit,
-    withdraw
+    withdraw,
+    rendFriends
 }

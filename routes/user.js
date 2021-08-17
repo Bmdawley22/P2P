@@ -10,5 +10,6 @@ router.get('/rendDeposit', userRouter.rendDeposit)
 router.get('/rendWithdraw', userRouter.rendWithdraw)
 router.get('/deposit', userRouter.deposit)
 router.get('/withdraw', userRouter.withdraw)
+router.get('/friends', userRouter.rendFriends)
 
 module.exports = router;

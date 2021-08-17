@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P</title>
+    <link href='../css/user.css' rel='stylesheet'> 
+</head>
+<body>
+    <header>
+        <a href='/user/acct' id='acct'>
+            <h3>Account:</h3>
+            <div >
+                <p><%= users[userId].fName + '      ' + users[userId].lName %></p>
+                <p><%= '$' + users[userId].bal%></p>
+            </div>
+        </a>
+        <div id='title'>
+            <h1>P2P Betting</h1>
+            <h3>The industries' first <span>peer-to-peer</span> betting app!</h3>
+        </div>
+        <div id='authLink'>
+            <a href='/auth/signOut'>Sign Out</a>
+        </div>
+    </header>
+    <main>
+        <div id='fiendsList'>
+            <% for (let i=0; i < friends.length;i++) { %>
+                <div id='<%= i %>' class='friendName'>
+                    <p><%= users[friends[i]].fName + '      ' + users[friends[i]].lName %></p> 
+                </div>
+            <% } %>
+        </div>       
+    </main>
+     
+</body>
+
+</html>

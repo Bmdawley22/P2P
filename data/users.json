@@ -9,7 +9,7 @@
                "id": "0",
                "active": "false",
                "bal": "1000",
-               "friends": []
+               "friends": [1,2]
           },
           {
                "fName": "Brady",
@@ -19,8 +19,8 @@
                "password": "packers",
                "id": "1",
                "active": false,
-               "bal": "50",
-               "friends": []
+               "bal": 0,
+               "friends": [0,2]
           },
           {
                "fName": "2",
@@ -31,7 +31,7 @@
                "id": "2",
                "active": true,
                "bal": 500,
-               "friends": []
+               "friends": [0,1]
           }
      ]
 }

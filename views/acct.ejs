@@ -33,18 +33,19 @@
               
     </main>
     <footer>
-        <div id='homeFriends'>
-            <p>Friends</p>
-            <p>6</p>
+        <div id='footerNav'>
+            <a id='friends' href='/user/friends'>
+                <p>Friends</p>
+                <p><%= user.friends.length %></p>
+            </a>
+            <a id='availableBets'>
+                <p>Available Bets</p>
+            </a>
+            <a id='offerBet'>
+                <p>Offer Bet</p>
+            </a>
         </div>
-        <div id='homeBets'>
-            <p>Available Bets</p>
-        </div>
-        <div id='homeAcct'>
-            <p>Brady</p>
-            <p>$88.00</p>
-        </div>
-    </footer> 
+    </footer>
 </body>
 
 </html>

@@ -11,6 +11,7 @@ friends list
 -   request bet w/ friend
 -   send message to friend
 -   notifications when friend creates bet
+-   view friends profile if public
 
 network
 -   Basis
@@ -29,3 +30,7 @@ Potential fantasy competitions
     -   bet $ per fantasy point
     -   pick from all players
 -   would need an API for getting player stats data
+
+Keep track of users bets
+-   show record, units, etc.
+-   make public private
