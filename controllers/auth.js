@@ -1,7 +1,6 @@
-const users = require('../data/userData')
 
 const fs = require('fs')
-
+const { getData, reWriteData } = require('../utils')
 
 
 const rendLogin = (req, res, next) => {
@@ -15,8 +14,8 @@ const rendSignup = (req, res, next) => {
     })
 }
 
-const login = (req, res, next) => {
-    let data = JSON.parse(fs.readFileSync('./data/users.json'));
+const login = async (req, res, next) => {
+    let data = await getData()
 
     //used for when using userData.js
     const usernameFound = data.users.findIndex(user => {
@@ -26,8 +25,7 @@ const login = (req, res, next) => {
         if(data.users[usernameFound].password === req.body.password) {
             data.users[usernameFound]["active"] = true;
             
-            data = JSON.stringify(data, null, 5)
-            fs.writeFileSync('./data/users.json', data, {encoding: 'utf-8'})
+            reWriteData(data)
             res.redirect('/user/home')
         }
         else {
@@ -44,18 +42,15 @@ const login = (req, res, next) => {
     }
 }
 
-const signup = (req,res,next) => {
+const signup = async (req,res,next) => {
     try {
-        let data = JSON.parse(fs.readFileSync('./data/users.json'))
+        let data = await getData()
 
         //gets input data in users.json format
         const newUser = req.body;
         newUser.id = String(data.users.length);
         newUser.active = true;
         let check = {nameCheck: true, emailCheck: true, userCheck: true}
-        let nameCheck = true
-        let emailCheck = true
-        let userCheck = true
 
         for(i=0;i<data.users.length; i++) {
             if(newUser.fName === data.users[i].fName && newUser.lName === data.users[i].lName) {
@@ -73,11 +68,8 @@ const signup = (req,res,next) => {
             if(check.userCheck) {
                 //adds data to users.json
                 data.users.push(newUser)
-                data = JSON.stringify(data, null, 5)
-
-                fs.writeFileSync('./data/users.json', data, (data) => {
-                    res.redirect('/user/home')
-                }) 
+                reWriteData(data)
+                res.redirect('/user/home')
             } else {
                 res.render('signup.ejs', {
                     auth: false,
@@ -97,9 +89,23 @@ const signup = (req,res,next) => {
     }
 }
 
+const signOut = async (req,res,next) => {
+
+    let data = await getData()
+    
+    for(i=0; i < data.users.length ; i++) {
+        if (data.users[i]["active"] === true) {
+            data.users[i]["active"] = false
+        }
+    }
+    reWriteData(data)
+    res.redirect('/')
+}
+
 module.exports = {
     rendLogin,
     rendSignup, 
     login,
-    signup
+    signup,
+    signOut
 }
