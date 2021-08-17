@@ -9,6 +9,6 @@ router.get('/acct', userRouter.rendAcct)
 router.get('/rendDeposit', userRouter.rendDeposit)
 router.get('/rendWithdraw', userRouter.rendWithdraw)
 router.get('/deposit', userRouter.deposit)
-router.get('/withdraw', userRouter.rendWithdraw)
+router.get('/withdraw', userRouter.withdraw)
 
 module.exports = router;

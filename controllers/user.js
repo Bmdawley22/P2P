@@ -54,11 +54,31 @@ const deposit = async (req,res,next) => {
         user: data.users[activeUserId]
     })
 }
+const withdraw = async (req,res,next) => {
+    let data = await getData()
 
+    let activeUserId = await findActiveUser(data).id
+    
+    const curBalance = Number(data.users[activeUserId]["bal"])
+    console.log(curBalance, Number(req.query.withdrawAmt));
+
+    if(curBalance > Number(req.query.withdrawAmt)) {
+        data.users[activeUserId]["bal"] = curBalance - Number(req.query.withdrawAmt);
+    } else {
+        data.users[activeUserId]["bal"] = 0
+    }
+    
+    reWriteData(data)
+
+    res.render('acct.ejs', {
+        user: data.users[activeUserId]
+    })
+}
 module.exports = {
     rendUserHome, 
     rendAcct,
     rendDeposit,
     rendWithdraw,
-    deposit
+    deposit,
+    withdraw
 }

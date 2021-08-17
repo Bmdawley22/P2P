@@ -55,17 +55,17 @@ main {
 main h3 {
     font-size: 50px;
 }
-#depositInput {
+#depositInput, #withdrawInput {
     font-size: 25px;
     padding: 8px;
     display: flex;
     justify-content: space-evenly;
 }
-#depositInput input {
+#depositInput input, #withdrawInput input {
     color: black;
     width: 8vw;
 }
-#depositSubmit {
+#depositSubmit, #withdrawSubmit {
     color: black;
     font-size: 25px;
     margin-top: 5px;
