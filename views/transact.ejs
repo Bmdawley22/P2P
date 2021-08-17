@@ -25,14 +25,15 @@
         <div id='balance'>
             <% if(transact === 'withdraw') {%>
                 <p>Withdrawable Balance: </p>
+                <p><%= '  ' + user.bal %></p>
             <%} else { %>
+                <form>
+                    <label></label>
+                    <input />
+                </form>
                 <p>Current Balance: </p>
+                <p><%= '  ' + user.bal %></p>
             <% } %>
-            <p><%= '  ' + user.bal %></p>
-        </div>
-        <div id='funding'>
-            <a id='deposit' href='/user/deposit'>Deposit</a>
-            <a id='withdraw' href='/user/withdraw'>Withdraw</a>
         </div>
               
     </main>
