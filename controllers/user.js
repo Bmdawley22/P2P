@@ -21,7 +21,29 @@ const rendAcct = async (req,res,next) => {
         user: activeUser
     })
 }
+
+const rendDeposit = async (req,res,next) => {
+    let data = await getData()
+
+    let activeUser = await findActiveUser(data)
+    res.render('transact.ejs', {
+        user: activeUser,
+        transact: 'deposit'
+    })
+}
+const rendWithdraw = async (req,res,next) => {
+    let data = await getData()
+
+    let activeUser = await findActiveUser(data)
+    res.render('transact.ejs', {
+        user: activeUser,
+        transact: 'withdraw'
+    })
+}
+
 module.exports = {
     rendUserHome, 
-    rendAcct
+    rendAcct,
+    rendDeposit,
+    rendWithdraw
 }

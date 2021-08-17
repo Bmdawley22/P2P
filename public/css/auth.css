@@ -24,7 +24,7 @@ header {
 }
 #title {
     width: 50%;
-    flex: center;
+    text-align: center;
 }
 #authLink{
     display: flex;

@@ -33,7 +33,7 @@ header {
 }
 #title {
     width: 50%;
-    flex: center;
+    text-align: center;
 }
 #authLink{
     display: flex;
@@ -55,8 +55,13 @@ main {
 main h3 {
     font-size: 50px;
 }
-#balance p {
+#balance {
     font-size: 30px;
+    background-color: blue;
+    border-radius: 5px;
+    width: 30vw;
+    position: relative;
+    left: 35vw;
 }
 #funding {
     display: flex;
@@ -64,10 +69,17 @@ main h3 {
     width: 30vw;
     position: relative;
     left: 35vw;
+    margin-top: 20px;
 }
-#funding h5 {
+#funding a {
     border: white solid 5px;
     border-radius: 8px;
     padding: 5px;
     font-size: 30px;
+    background-color: rgb(95, 93, 93);
+    text-decoration: none;
+}
+
+#deposit:hover, #withdraw:hover {
+    opacity: 0.75;
 }
