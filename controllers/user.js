@@ -1,23 +1,27 @@
 const fs = require('fs')
-const { getData, reWriteData } = require('../utils')
+const { getData, reWriteData, findActiveUser } = require('../utils')
 
 
 const rendUserHome = async (req, res, next) => {
-    let activeUser = {};
 
     let data = await getData()
 
-    for(i=0; i < data.users.length ; i++) {
-        if (data.users[i]["active"] === true) {
-            activeUser = data.users[i]
-        }
-    }
+    let activeUser = await findActiveUser(data)
 
     res.render('user.ejs', {
         user: activeUser
     })
 }
 
+const rendAcct = async (req,res,next) => {
+    let data = await getData()
+
+    let activeUser = await findActiveUser(data)
+    res.render('acct.ejs', {
+        user: activeUser
+    })
+}
 module.exports = {
-    rendUserHome
+    rendUserHome, 
+    rendAcct
 }

@@ -1,5 +1,8 @@
 body {
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 * {
     color: white;
@@ -41,5 +44,30 @@ header {
     height: 40px;
     width: 15%;
     background-color: darkred;
-    border-radius: 10px;
+}
+main { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+}
+main h3 {
+    font-size: 50px;
+}
+#balance p {
+    font-size: 30px;
+}
+#funding {
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+    position: relative;
+    left: 35vw;
+}
+#funding h5 {
+    border: white solid 5px;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 30px;
 }

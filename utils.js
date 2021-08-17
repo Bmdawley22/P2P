@@ -16,7 +16,17 @@ const reWriteData = async (rawData) => {
     }) 
     
 }
+
+const findActiveUser = (data) => {
+    for(i=0; i < data.users.length ; i++) {
+        if (data.users[i]["active"] === true) {
+            return data.users[i]
+        }
+    }
+
+}
 module.exports = {
     getData,
-    reWriteData
+    reWriteData,
+    findActiveUser
 }

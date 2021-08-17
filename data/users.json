@@ -17,7 +17,7 @@
                "username": "bmdawley",
                "password": "packers",
                "id": "1",
-               "active": "false",
+               "active": true,
                "bal": "$20"
           },
           {
@@ -27,7 +27,7 @@
                "username": "2",
                "password": "2",
                "id": "2",
-               "active": true,
+               "active": false,
                "bal": "$0"
           }
      ]
