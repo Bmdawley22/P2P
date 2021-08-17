@@ -9,10 +9,13 @@
 </head>
 <body>
     <header>
-        <div id='acct'>
-            <p><%= user.fName + '      ' + user.lName %></p>
-            <p><%= user.bal%></p>
-        </div>
+        <a href='/user/acct' id='acct'>
+            <h3>Account:</h3>
+            <div >
+                <p><%= user.fName + '      ' + user.lName %></p>
+                <p><%= user.bal%></p>
+            </div>
+        </a>
         <div id='title'>
             <h1>P2P Betting</h1>
             <h3>The industries' first <span>peer-to-peer</span> betting app!</h3>
