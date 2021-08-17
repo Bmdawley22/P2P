@@ -8,7 +8,8 @@
                "password": "packers",
                "id": "0",
                "active": "false",
-               "bal": "1000"
+               "bal": "1000",
+               "friends": []
           },
           {
                "fName": "Brady",
@@ -18,7 +19,8 @@
                "password": "packers",
                "id": "1",
                "active": false,
-               "bal": "50"
+               "bal": "50",
+               "friends": []
           },
           {
                "fName": "2",
@@ -28,7 +30,8 @@
                "password": "2",
                "id": "2",
                "active": true,
-               "bal": 500
+               "bal": 500,
+               "friends": []
           }
      ]
 }
