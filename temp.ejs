@@ -5,23 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P2P</title>
-    <link href='../css/user.css' rel='stylesheet'> 
+    <link href='./css/auth.css' rel='stylesheet'>   
 </head>
 <body>
     <header>
-        <a href='/user/acct' id='acct'>
-            <h3>Account:</h3>
-            <div >
-                <p><%= user.fName + '      ' + user.lName %></p>
-                <p><%= '$' + user.bal%></p>
+        <a href='/user/account'>
+            <div id='account'>     
+                <p>Account</p>
+                <p><%= user.fName + ' ' + user.lName %></p>
             </div>
         </a>
         <div id='title'>
             <h1>P2P Betting</h1>
             <h3>The industries' first <span>peer-to-peer</span> betting app!</h3>
         </div>
-        <div id='authLink'>
-            <a href='/auth/signOut'>Sign Out</a>
+        <div id='balance'>
+            <a href='/user/'>
+                <p>Balance: <%= user.acct %></p>
+
+            </a>
         </div>
     </header>
     <main>
@@ -35,22 +37,21 @@
             <div id='mainDiv3' class='mainDiv'>
                 <h5>Offer Your Bet</h5>
             </div>  
-        </div>       
-    </main>
-    <footer>
-        <div id='footerNav'>
-            <a id='friends' href='/user/friends'>
-                <p>Friends</p>
-                <p><%= user.friends.length %></p>
-            </a>
-            <a id='availableBets'>
-                <p>Available Bets</p>
-            </a>
-            <a id='offerBet'>
-                <p>Offer Bet</p>
-            </a>
         </div>
-    </footer>    
+        <footer>
+            <div id='homeFriends'>
+                <p>Friends</p>
+                <p>6</p>
+            </div>
+            <div id='homeBets'>
+                <p>Available Bets</p>
+            </div>
+            <div id='homeAcct'>
+                <p>Brady</p>
+                <p>$88.00</p>
+            </div>
+        </footer>       
+    </main>
 </body>
 
 </html>

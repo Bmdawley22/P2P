@@ -25,10 +25,11 @@
         </div>
     </header>
     <main>
-        <div id='fiendsList'>
+        <div id='friendsList'>
             <% for (let i=0; i < friends.length;i++) { %>
-                <div id='<%= i %>' class='friendName'>
-                    <p><%= users[friends[i]].fName + '      ' + users[friends[i]].lName %></p> 
+                <div id='<%= i %>' class='friend'>
+                    <p class='friendName'><%= users[friends[i]].fName + '      ' + users[friends[i]].lName %></p> 
+                    <a href='/user/friend/profile/<%= friends[i]%>' class='viewProfile'>View Profile</a>
                 </div>
             <% } %>
         </div>       

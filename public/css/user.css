@@ -55,11 +55,27 @@ main {
 main h3 {
     font-size: 50px;
 }
-
 #friendsList {
-    
+    width: 33vw;
+    position: relative;
+    left: 33vw;
 }
-
+.friend {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+}
+.viewProfile {
+    text-decoration: none;
+    border: white solid 2px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.viewProfile:hover {
+    background-color: rgb(54, 54, 54);
+}
 #depositInput, #withdrawInput {
     font-size: 25px;
     padding: 8px;
@@ -83,7 +99,7 @@ main h3 {
     position: relative;
     left: 35vw;
 }
-#funding {
+#funding, #friendActions {
     display: flex;
     justify-content: space-between;
     width: 30vw;
@@ -91,7 +107,7 @@ main h3 {
     left: 35vw;
     margin-top: 20px;
 }
-#funding a {
+#funding a, #friendActions a {
     border: white solid 5px;
     border-radius: 8px;
     padding: 5px;
@@ -100,7 +116,7 @@ main h3 {
     text-decoration: none;
 }
 
-#deposit:hover, #withdraw:hover {
+#deposit:hover, #withdraw:hover, #message:hover, #offerBet:hover {
     opacity: 0.75;
 }
 footer {

@@ -87,6 +87,13 @@ const rendFriends = async (req,res,next) => {
         friends: friendsArr
     })
 }
+const rendFriendProfile = async (req,res,next) => {
+    let data = await getData()
+
+    res.render('friendProfile.ejs', {
+        user: data.users[req.params.id] 
+    })
+}
 module.exports = {
     rendUserHome, 
     rendAcct,
@@ -94,5 +101,6 @@ module.exports = {
     rendWithdraw,
     deposit,
     withdraw,
-    rendFriends
+    rendFriends,
+    rendFriendProfile
 }

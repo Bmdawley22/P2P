@@ -9,7 +9,10 @@
                "id": "0",
                "active": "false",
                "bal": "1000",
-               "friends": [1,2]
+               "friends": [
+                    1,
+                    2
+               ]
           },
           {
                "fName": "Brady",
@@ -20,7 +23,10 @@
                "id": "1",
                "active": false,
                "bal": 0,
-               "friends": [0,2]
+               "friends": [
+                    0,
+                    2
+               ]
           },
           {
                "fName": "2",
@@ -31,7 +37,10 @@
                "id": "2",
                "active": true,
                "bal": 500,
-               "friends": [0,1]
+               "friends": [
+                    0,
+                    1
+               ]
           }
      ]
 }
