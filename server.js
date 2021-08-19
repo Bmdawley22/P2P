@@ -6,6 +6,7 @@ const methodOverride = require('method-override'); //gets method-override librar
 
 const authRouter = require('./routes/auth')
 const userRouter = require('./routes/user')
+const sportsRouter = require('./routes/sports')
 
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended: true})); //changes response from client to JS understandable
@@ -14,6 +15,7 @@ app.set(('view engine', 'ejs'))
 
 app.use('/auth', authRouter)
 app.use('/user', userRouter)
+app.use('/sports',sportsRouter)
 
 app.get('/', (req, res) => {
   res.render('index.ejs', {
