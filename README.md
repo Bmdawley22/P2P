@@ -3,9 +3,10 @@ peer-to-peer betting app
 
 
 TODO:
+-   get CSS formatting figured out for sportsList
 -   change getData to getUsers
 -   use getUsers in findActiveUser
-- separate css for each ejs file
+-   eparate css for each ejs file
 
 ideas
 
