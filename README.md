@@ -2,6 +2,11 @@
 peer-to-peer betting app
 
 
+TODO:
+-   change getData to getUsers
+-   use getUsers in findActiveUser
+- separate css for each ejs file
+
 ideas
 
 account

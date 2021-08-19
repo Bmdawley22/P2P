@@ -5,16 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P2P</title>
-    <link href='../css/user.css' rel='stylesheet'> 
+    <link href='../css/sports.css' rel='stylesheet'> 
 </head>
 <body>
     <header>
-        <a href='/user/acct' id='acct'>
-            <h3>Account:</h3>
-            <div >
-                <p><%= user.fName + '      ' + user.lName %></p>
-                <p><%= '$' + user.bal%></p>
-            </div>
+        <a href='/user/home' id='acct'>
+            <h3>Home</h3>
         </a>
         <div id='title'>
             <h1>P2P Betting</h1>
@@ -25,17 +21,16 @@
         </div>
     </header>
     <main>
-        <div id='homeFeatures'>
-            <div id='mainDiv1' class='mainDiv'>
-                <h5>Bet Your Friends</h5>
+        <div id='allSportContainer'>
+            <h3>All Sports</h3>
+            <div id='sportList'>        
+                <% for(let i=0; i < sports.length; i++) { %>
+                    <a href='/sports/sport' class="sport" id=<%= 'sport_' + String(i) %> >
+                        <%= sports[i] %>
+                    </a>
+                <% } %>
             </div>
-            <div id='mainDiv2' class='/sports'>
-                <h5>P2P Network Bets</h5>
-            </div>
-            <div id='mainDiv3' class='mainDiv'>
-                <h5>Offer Your Bet</h5>
-            </div>  
-        </div>       
+        </div>
     </main>
     <footer>
         <div id='footerNav'>
@@ -43,14 +38,14 @@
                 <p>Friends</p>
                 <p><%= user.friends.length %></p>
             </a>
-            <a id='availableBets'>
+            <a id='availableBets' href='/sports'>
                 <p>Available Bets</p>
             </a>
             <a id='offerBet'>
                 <p>Offer Bet</p>
             </a>
         </div>
-    </footer>    
+    </footer>
 </body>
 
 </html>
