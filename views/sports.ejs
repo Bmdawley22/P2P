@@ -25,7 +25,7 @@
             <h3>All Sports</h3>
             <div id='sportList'>        
                 <% for(let i=0; i < sports.length; i++) { %>
-                    <a href='/sports/sport' class="sport" id=<%= 'sport_' + String(i) %> >
+                    <a href='/sports/<%=i%>' class="sport" id=<%= 'sport_' + String(i) %> >
                         <%= sports[i] %>
                     </a>
                 <% } %>

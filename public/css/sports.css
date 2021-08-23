@@ -59,23 +59,23 @@ header {
 #sportList {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     border: 5px white solid;
-    overflow: scroll;
-    height: 40vh;
+    height: 50vh;
     padding: 10px;
-}
-#sport_0 {
-    position: fixed;
-    top: 0;
-}
-.sport {
-    margin: 3px auto;
-    font-size: 20px;
-    top: 0;
-    bottom: 0;
+    overflow: auto;
 }
 
+.sport {
+    margin: 5px auto;
+    font-size: 20px;
+    border: gray solid 2px;
+    width: 22vw;
+    text-align: center;
+    text-decoration: none;
+}
+.sport:hover {
+    background-color: rgb(54, 54, 54);
+}
 footer {
     width: 100vw;
     position: fixed;
