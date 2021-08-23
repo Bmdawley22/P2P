@@ -12,19 +12,18 @@ const renderSports = async (req, res, next) => {
 
     let leagues = []
     let sports = [];
+    let repeatCtr = 0;
 
     for(let i=0; i < data.length; i++) {
         if(!sports.includes(data[i]['group'])){
-            sports[i] = data[i]["group"]
+            sports[i-repeatCtr] = data[i]["group"]
+        } else {
+            repeatCtr++;
         }
-        if(!leagues.includes(data[i]['title'])){
-            leagues[i] = data[i]["title"];
-        }
-        
+
     }
-    // console.log(leagues, sports);
+    console.log(sports);
     res.render('sports.ejs', {
-        leagues,
         sports,
         user: activeUser
     })
